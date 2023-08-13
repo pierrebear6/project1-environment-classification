@@ -27,7 +27,7 @@ This program was made with the intention to use it as a data framework for futur
 
 ## Intro
 
-Hello! Ever since I was old enough to open my own brokerage account, algorithmic trading has piqued my interest. During my time in school, I embarked on several personal projects centered around algo trading and stock market analysis. This project is an improvement of my previous work, with a focus on data gathering and preparation. Through this project, I also aim to showcase fundamental skills like object-oriented programming, data analysis, Python coding, and machine learning techniques. Join me as I explore the world of data-driven trading strategies and bring insights to the ever-dynamic stock market.
+I became interested in algorithmic trading right around the time I was old enough to open my own brokerage account. During my time in school, I've done several personal projects centered around algo trading and stock market analysis. This project is an improvement of my previous work, with a focus on data gathering and preparation. Through this project, I also aim to showcase fundamental skills like object-oriented programming, data analysis, Python coding, and machine learning techniques. Join me as I explore the world of data-driven trading strategies and bring insights to the ever-dynamic stock market.
 
 ## Overview
 
@@ -113,7 +113,7 @@ A minmax scalar function is included. Additional scaling and normalizing methods
    - **Residual:** A decomposition of the original time series. Similar to time series 'noise'.
        
 - 'Target'
-   - The label data. 0 if the stock price trends down, 1 if the stock price is stagnant (future variability < current ATR) and 2 if the stock trends up.
+   - The label data. 0 if the stock price trends down, 1 if the stock price is stagnant (future variability < current ATR), and 2 if the stock trends up.
  
 ## Data Analysis
 
@@ -213,6 +213,7 @@ These strategies exploit the implied volatility variable in options pricing mode
     - Preliminary feature engineering function
     - Improved OOP/formatting
 - **Deep Dive into Feature Engineering of Time Series Data for ML Models:** Research and test various time series feature engineering techniques to improve model performance. (Feature extraction of nonstationary time series data to use as a label for RNN model?...)
+- **Other ML Algos:** Apply other machine learning methods to gain more insight into stock data.
 
 ## Details
 

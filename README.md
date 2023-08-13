@@ -23,7 +23,7 @@ Hello! Ever since I was old enough to open my own brokerage account, algorithmic
 
 ## Overview:
 
-![Project Overview Flowchart](images/Projectflowchart.png)
+![Project Overview Flowchart](images/ProjectFlowchart.png)
 
 ## Data Exploration and Preprocessing 
 ## Data Analysis

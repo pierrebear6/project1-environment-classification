@@ -14,6 +14,7 @@ df1 = stock.import_data()
 df2 = stock.import_compare_data()[2:]  # Comment
 df2 = df2.reset_index(drop=True)
 
+# For independent reproduction of results
 example_retest = False
 if example_retest:
     df1 = pd.read_csv(rf'{filepath}/data/example_data/df1.csv')

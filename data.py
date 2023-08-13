@@ -8,7 +8,8 @@ from ydata_profiling import ProfileReport
 from ta.volatility import AverageTrueRange
 from functions.feature_stationarity import *
 
-filepath = 'D:/simon/portfolio_projects/project1'
+filepath = '###'
+# filepath removed
 
 
 class GatherCandlestickData():

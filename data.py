@@ -65,9 +65,7 @@ class GatherCandlestickData():
         """
         :return: yfin_data: stock data from yfinance
         """
-        # Store data or just use this function? Check later
 
-        #
         yfin_data = yf.Ticker(self.ticker).history(period=self.period, interval=self.interval)
         yfin_data = yfin_data
         date_trim = int(self.period[0]) * 252

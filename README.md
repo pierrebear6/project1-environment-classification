@@ -1,14 +1,18 @@
 # Stock Trend Classifier / stock-env-classification
 
-## Description:
+Simon Sayson
+
+August 13, 2023
+
+## Description
 
 This program gets a stock's candlestick data and uses it as input to a classification model to predict how the stock will trend.
 
-## Focus:
+## Focus
 
 This program was made with the intention to use it as a data framework for future projects as well as demonstrate some key skills. Main functionalities include data gathering, cleaning, and inspection, statistical analysis (descriptive and inferential), and example work of feature engineering and hypothesis testing.
 
-## Table of Contents:
+## Table of Contents
 
 - [Intro](#Intro)
 - [Overview](#Overview)
@@ -21,15 +25,15 @@ This program was made with the intention to use it as a data framework for futur
 - [Details](#Details)
 - [Potential Challenges](#Potential-Challenges)
 
-## Intro:
+## Intro
 
 Hello! Ever since I was old enough to open my own brokerage account, algorithmic trading has piqued my interest. During my time in school, I embarked on several personal projects centered around algo trading and stock market analysis. This project is an improvement of my previous work, with a focus on data gathering and preparation. Through this project, I also aim to showcase fundamental skills like object-oriented programming, data analysis, Python coding, and machine learning techniques. Join me as I explore the world of data-driven trading strategies and bring insights to the ever-dynamic stock market.
 
-## Overview:
+## Overview
 
 ![Project Overview Flowchart](images/Project_Flowchart.png)
 
-## Data Exploration and Preprocessing:
+## Data Exploration and Preprocessing
 
 > [!NOTE]
 > For demonstration purposes, the stock data selected will be from the stock ticker 'AMD'.
@@ -94,8 +98,24 @@ A basic train/test split function is included, along with an additional function
 
 **Scaling/Normalizing**
 A minmax scalar function is included. Additional scaling and normalizing methods may be added in the future, depending on the specific models used.
+
+### Features and Labels Used:
+
+- 'Open', 'High', 'Low', 'Close' 'Volume'
+ -  The initial data provided from our data sources.
+
+- 'Volatility', 'Volatility_Pct', 'ATR',  'LogReturn', 'varLogReturn', 'stdLogReturn', 'Return', 'varReturn', 'stdReturn', 'NightGain', 'IntradayGain'
+ - These are common volatility related features. These were selected based on the results from the inferential statistics testing done. ([Inference Statistics](#Inference-Statistics---Hypothesis-Test)
+       
+- 'ffd_adf_Open', 'ffd_adf_High', 'ffd_adf_Low','ffd_adf_Close', 'ffd_adf_Volume', 'ffd_adf_Return', 'ffd_adf_LogReturn', 'ffd_adf_NightGain', 'ffd_adf_IntradayGain', 'residual_Open', 'residual_High', 'residual_Low', 'residual_Close', 'residual_Volume'
+ - Time series decomposition techniques added to some of the other features.
+  - **Fixed-width window fractional differentiation:**  This method first checks to see if the series passes an ADF test at a p value of .05. If it passes, the df will be subjected to fractional differentiation using a fixed-width window. This is a practice that has been introduced by Marcos Lopez de Prado, a hedge fund manager known for his research in modern financial machine learning.
+  - **Residual:** A decomposition of the original time series. Similar to time series 'noise'.
+       
+- 'Target'
+ - The label data. 0 if the stock price trends down, 1 if the stock price is stagnant (future variability < current ATR) and 2 if the stock trends up.
  
-## Data Analysis:
+## Data Analysis
 
 Two main methods are added to analyze the data:
 
@@ -139,16 +159,31 @@ ATR Future Variability Statistics:
 
 We can see there are some similarities in the skewness of the distributions.
 
+**Results:**
+
 ![AMD Hypothesis ATR Stats](images/vol_vs_atrdiff.png)
 
+It appears that there is no significant correlation between the relative magnitude of volatility and the future variability of price. One notable observation is that there seems to be a relationship where higher current volatility is associated with a decrease in future price variability. (NOTE: Point density at 0 and 1 is due to Volatility_Pct having lower lows or higher highs. Not that important as it is intended to be used as a demonstration.)
+
+With that in mind, it may be important to add features relating to volatility.
+
+## Machine Learning Model
+
+**Model Selection:**
+As this projects primary focus is data gathering, cleaning and analyzing, I'll select a commonly used classification algorithm such as SVMs. 
+
+**Validation:**
+
+A grid search kfold cross validation method will be used to validate the model during training.
+
+## Results
 
 
-## Machine Learning Model:
-## Results:
-## Potential Challenges:
-## Future Work:
-## Details:
-## Usage:
+
+## Potential Challenges
+## Future Work
+## Details
+## Usage
 
 
 

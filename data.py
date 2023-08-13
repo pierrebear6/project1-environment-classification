@@ -10,8 +10,8 @@ from functions.feature_stationarity import *
 from sklearn.linear_model import LinearRegression
 from sklearn.feature_selection import RFE
 
-filepath = 'D:/simon/portfolio_projects/project1'
-
+filepath = '###'
+# filepath removed
 
 class GatherCandlestickData():
     def __init__(self, ticker=None, interval='1d', period='6y', output='full'):

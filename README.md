@@ -23,7 +23,7 @@ This program was made with the intention to use it as a data framework for futur
 - [Use Cases](#Use-Cases)
 - [Future Work](#Future-Work)
 - [Details](#Details)
-- [Potential Challenges](#Potential-Challenges)
+- [Usage](#Usage)
 
 ## Intro
 

@@ -105,11 +105,11 @@ A minmax scalar function is included. Additional scaling and normalizing methods
    -  The initial data provided from our data sources.
 
 - 'Volatility', 'Volatility_Pct', 'ATR',  'LogReturn', 'varLogReturn', 'stdLogReturn', 'Return', 'varReturn', 'stdReturn', 'NightGain', 'IntradayGain'
-   - These are common volatility related features. These were selected based on the results from the inferential statistics testing done. ([Inference Statistics](#Inference-Statistics---Hypothesis-Test)
+   - These are common volatility-related features. These were selected based on the results from the inferential statistics testing done. ([Inference Statistics](#Inference-Statistics---Hypothesis-Test)
        
 - 'ffd_adf_Open', 'ffd_adf_High', 'ffd_adf_Low','ffd_adf_Close', 'ffd_adf_Volume', 'ffd_adf_Return', 'ffd_adf_LogReturn', 'ffd_adf_NightGain', 'ffd_adf_IntradayGain', 'residual_Open', 'residual_High', 'residual_Low', 'residual_Close', 'residual_Volume'
    - Time series decomposition techniques added to some of the other features.
-   - **Fixed-width window fractional differentiation:**  This method first checks to see if the series passes an ADF test at a p value of .05. If it passes, the df will be subjected to fractional differentiation using a fixed-width window. This is a practice that has been introduced by Marcos Lopez de Prado, a hedge fund manager known for his research in modern financial machine learning.
+   - **Fixed-width window fractional differentiation:**  This method first checks to see if the series passes an ADF test at a p-value of .05. If it passes, the df will be subjected to fractional differentiation using a fixed-width window. This is a practice that has been introduced by Marcos Lopez de Prado, a hedge fund manager known for his research in modern financial machine learning.
    - **Residual:** A decomposition of the original time series. Similar to time series 'noise'.
        
 - 'Target'
@@ -201,18 +201,18 @@ These strategies exploit the implied volatility variable in options pricing mode
 
 **Iron Condors, Credit Spreads, Butterfly Spreads:** When the model indicates that the stock price is likely to remain within the ATR range, signifying consolidation (prediction of 1), these options strategies can be formulated. The ATR can be used to identify estimated price ranges for potential strike prices, with the chosen window size serving as the option expiration timeframe.
 
-## Price Trend Options Strategies
+### Price Trend Options Strategies
 
 **Covered Calls, Cash Secured Puts:**  Similarly, these strategies allow the collection of options premium when the model predicts the stock to follow a trend rather than consolidating (prediction of 0 or 2).
 
 ## Future Work
 
 - **Current Project Updates:** Additional functions may be added to improve this project such as:
-    - Expanded feature selection techniques (specific to model)
+    - Expanded feature selection techniques (specific to the model)
     - Hyperparameter tuning of feature selection techniques
     - Preliminary feature engineering function
     - Improved OOP/formatting
-- **Deep Dive into Feature Engineering of Time Series Data for ML Models:** Research and test various time series feature engineering techniques to improve model performance. (Feature extraction of nonstationary time series data to use as label for RNN model?...)
+- **Deep Dive into Feature Engineering of Time Series Data for ML Models:** Research and test various time series feature engineering techniques to improve model performance. (Feature extraction of nonstationary time series data to use as a label for RNN model?...)
 
 ## Details
 

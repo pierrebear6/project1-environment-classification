@@ -170,11 +170,10 @@ With that in mind, it may be important to add features relating to volatility.
 ## Machine Learning Model
 
 **Model Selection:**
-As this projects primary focus is data gathering, cleaning and analyzing, I'll select a commonly used classification algorithm such as SVMs. 
+As this project's primary focus is data gathering, cleaning, and analyzing, I'll select a commonly used classification algorithm such as SVMs. 
 
 **Validation:**
-
-A grid search kfold cross validation method will be used to validate the model during training.
+A grid search kfold cross-validation method will be used to validate the model during training.
 
 ## Results
 

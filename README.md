@@ -87,16 +87,16 @@ diff = np.abs(df1 - df2)
 ```
 
 ### Prepare Data
-**Cleaning**
+**Cleaning:**
 Several methods have been created to:
 - Ensure that the data is the correct size
 - Handle NaN/Null/Zero values. Either through filtering or basic imputation
 - The df is not empty
 
-**Splitting**
+**Splitting:**
 A basic train/test split function is included, along with an additional function that also splits features and labels.
 
-**Scaling/Normalizing**
+**Scaling/Normalizing:**
 A minmax scalar function is included. Additional scaling and normalizing methods may be added in the future, depending on the specific models used.
 
 ### Features and Labels Used:
@@ -105,7 +105,7 @@ A minmax scalar function is included. Additional scaling and normalizing methods
    -  The initial data provided from our data sources.
 
 - 'Volatility', 'Volatility_Pct', 'ATR',  'LogReturn', 'varLogReturn', 'stdLogReturn', 'Return', 'varReturn', 'stdReturn', 'NightGain', 'IntradayGain'
-   - These are common volatility-related features. These were selected based on the results from the inferential statistics testing done. ([Inference Statistics](#Inference-Statistics---Hypothesis-Test)
+   - These are common volatility-related features. These were selected based on the results from the inferential statistics testing done. ([Inference Statistics](#Inference-Statistics---Hypothesis-Test))
        
 - 'ffd_adf_Open', 'ffd_adf_High', 'ffd_adf_Low','ffd_adf_Close', 'ffd_adf_Volume', 'ffd_adf_Return', 'ffd_adf_LogReturn', 'ffd_adf_NightGain', 'ffd_adf_IntradayGain', 'residual_Open', 'residual_High', 'residual_Low', 'residual_Close', 'residual_Volume'
    - Time series decomposition techniques added to some of the other features.

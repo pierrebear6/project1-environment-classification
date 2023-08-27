@@ -1,4 +1,4 @@
-# Stock Trend Classifier / stock-env-classification
+# Stock Trend Classifier / project1-environment-classification
 
 Simon Sayson
 
